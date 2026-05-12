@@ -6,6 +6,12 @@ pipeline. The standard ResNet-50 image encoder is replaced with a Vision
 Transformer to shrink inference time while keeping reconstruction quality
 comparable.
 
+![Reconstruction examples](alignment.png)
+
+<p align="center">
+  <img src="example.gif" alt="Inference demo" width="600">
+</p>
+
 ## What's in this repo
 
 | Path | Purpose |
