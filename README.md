@@ -123,6 +123,19 @@ For each image the script saves:
 It also prints the average inference time per image — the headline metric
 this project optimizes.
 
+## Results
+
+Sample model outputs (input image, reconstructed mesh overlay, and rendered reconstruction):
+
+<p align="center">
+  <img src="output_vis_006.png" width="48%">
+  <img src="output_vis_007.png" width="48%">
+</p>
+<p align="center">
+  <img src="output_vis_009.png" width="48%">
+  <img src="output_vis_018.png" width="48%">
+</p>
+
 ## Why a transformer backbone?
 
 The upstream model uses ResNet-50 to regress BFM coefficients from an
