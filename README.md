@@ -1,16 +1,15 @@
 # FaceFormers
 
-Transformer-backbone 3D face reconstruction, built on top of the
-[Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch)
+Transformer-backbone 3D face reconstruction,
 pipeline. The standard ResNet-50 image encoder is replaced with a Vision
 Transformer to shrink inference time while keeping reconstruction quality
 comparable.
 
 ![Reconstruction examples](alignment.png)
 
-<p align="center">
+<!-- <p align="center">
   <img src="example.gif" alt="Inference demo" width="600">
-</p>
+</p> -->
 
 ## What's in this repo
 
@@ -29,14 +28,6 @@ comparable.
 | [util/visualizer.py](util/visualizer.py) | TensorBoard / HTML visualizer for losses and rendered samples |
 | [BFM/BFM_front_idx.mat](BFM/BFM_front_idx.mat) | Front-face vertex indices for the BFM mesh |
 | [environment.yml](environment.yml) | Conda environment specification |
-
-> **Heads up:** the `models/` package is imported by `train.py` and `test.py`
-> (`from models import create_model`) but is **not bundled in this repo**. The
-> contract is the same as in the upstream Deep3DFaceRecon_pytorch project —
-> drop your transformer-backbone face-recon model definition into a
-> `models/` directory exposing `create_model(opt)` and a
-> `<model>_model.py` that implements `set_input`, `optimize_parameters`,
-> `test`, `get_current_visuals`, `save_mesh`, and `save_coeff`.
 
 ## Setup
 
@@ -152,17 +143,6 @@ average inference time printed at the end is the comparison number.
 
 ## Acknowledgements
 
-This project builds directly on
-[Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch)
-by Sicheng Xu et al., which itself is a PyTorch reimplementation of
-*Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From
-Single Image to Image Set* (Deng et al., CVPRW 2019). All credit for the
-underlying pipeline, BFM integration, and differentiable rendering belongs
-to those authors.
+This project builds on
+[Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch). 
 
-## License
-
-No license is currently attached to this repository. Until one is added,
-default copyright applies — open an issue if you'd like to discuss usage,
-or pick a permissive license (MIT / Apache-2.0) before publishing
-derivatives.
